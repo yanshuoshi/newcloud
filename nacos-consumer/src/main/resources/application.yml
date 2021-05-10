@@ -1,0 +1,16 @@
+server:
+  port: 10050
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      #指定注册中心地址
+      discovery:
+        server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        #暴露所有web端点
+        include: '*'

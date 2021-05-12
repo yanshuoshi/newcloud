@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,9 +10,11 @@
         <module name="nacos-product" />
         <module name="nacos-consumer" />
         <module name="same-configure" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="gateway" target="11" />
       <module name="nacos" target="11" />
       <module name="nacos-consumer" target="11" />
       <module name="nacos-product" target="11" />
@@ -20,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gateway" options="-parameters" />
       <module name="nacos" options="-parameters" />
       <module name="nacos-consumer" options="-parameters" />
       <module name="nacos-product" options="-parameters" />

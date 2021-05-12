@@ -21,7 +21,7 @@ public class ProductController {
     @Value("${server.port}")
     private int port;
 
-    @GetMapping("/product/find")
+    @GetMapping("/pro/find")
     public Map<String, Object> find() {
         Map<String, Object> map = new HashMap<>();
         log.info("进入商品服务,当前接收的商品id为:[{}]", "1");

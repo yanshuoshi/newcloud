@@ -13,6 +13,6 @@ import java.util.Map;
 @Component
 public interface ProductClient {
 
-    @GetMapping("/product/find")
+    @GetMapping("/pro/find")
     public Map<String, Object> find();
 }

@@ -18,4 +18,8 @@ nacos 配置中心使用demo
 远程跨服务调用 被调用方
 使用nacos + openFeign 将服务自动注册到nacos并可远程服务调用
 
+### gateway
+
+使用spring-cloud-gateway + nacos实现路由
+
 

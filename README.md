@@ -20,6 +20,6 @@ nacos 配置中心使用demo
 
 ### gateway
 
-使用spring-cloud-gateway + nacos实现路由
+使用spring-cloud-gateway + nacos实现路由 限流
 
 

@@ -1,6 +1,7 @@
 package com.yss.controller;
 
 import com.yss.openfegin.ProductClient;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,7 @@ public class UserController {
     private ProductClient productClient;
 
     @GetMapping("/getProductInfo")
+    @GlobalTransactional(name ="cloud-seata-info",timeoutMills = 60000)
     public Map<String, Object> getProductInfo() {
         Map<String, Object> map = productClient.find();
         log.info("返回的信息:[{}]" + map);
